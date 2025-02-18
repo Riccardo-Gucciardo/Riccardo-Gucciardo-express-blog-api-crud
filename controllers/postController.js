@@ -5,6 +5,7 @@ function index(req,res){
 
     let filteredPosts = arrayPosts;
 
+
     if(req.query.tags) {
         filteredPosts = arrayPosts.filter(arrayPosts=>{
             return arrayPosts.tags.includes(req.query.tags)

@@ -81,10 +81,11 @@ function update(req,res){
 arrayPosts.title = req.body.title;
 arrayPosts.content = req.body.content;
 arrayPosts.image = req.body.immagine;
-arrayPosts.tags = req.corpo.Tags;
+arrayPosts.tags = req.body.tags;
+
 
 console.log(arrayPosts)
-res. json (post);
+res.json(post);
 
 
 

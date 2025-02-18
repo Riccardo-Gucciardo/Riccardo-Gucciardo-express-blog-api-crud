@@ -67,21 +67,22 @@ function update(req,res){
     
     if (!post) {
         
-        res.status (404)
+        res.status(404)
         
         return res.json(
             {
             status: 404,
             error: "Not Found",
             message: 'Post not found'
-            });
-        }
+            }
+        );
+    }
         
         
-arrayPosts.title = req.body.title;
-arrayPosts.content = req.body.content;
-arrayPosts.image = req.body.immagine;
-arrayPosts.tags = req.body.tags;
+post.title = req.body.title;
+post.content = req.body.content;
+post.image = req.body.immagine;
+post.tags = req.body.tags;
 
 
 console.log(arrayPosts)

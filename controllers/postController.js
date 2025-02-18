@@ -94,7 +94,37 @@ res.json(post);
     
 }
 function patch(req,res){
-    res.send(`Modifica parziale della pizza ${req.params.id} `);
+        
+    const id = parseInt(req.params.id);
+    const post = arrayPosts.find(arrayPosts => arrayPosts.id === id);
+    
+    
+    if (!post) {
+        
+        res.status(404)
+        
+        return res.json(
+            {
+            status: 404,
+            error: "Not Found",
+            message: 'Post not found'
+            }
+        );
+    }
+        
+        
+post.title = req.body.title;
+post.content = req.body.content;
+post.image = req.body.immagine;
+post.tags = req.body.tags;
+
+
+console.log(arrayPosts)
+res.json(post);
+
+
+
+  
 
 
     
